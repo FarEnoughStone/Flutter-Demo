@@ -51,7 +51,7 @@ const RawImage({
        super(key: key);
 ```
 
-这里，只对Image没有的属性进行说明，与Image相同的属性请查看XXX
+这里，只对Image没有的属性进行说明，与Image相同的属性请查看[Image类](./Image类.md)
 
 ### ui.Image image
 虽然Image与RawImage 的第一个参数都是image，但却是不同的，前者是Material下的Image，后者是dart：ui下的Image
