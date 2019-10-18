@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/icons_demo.dart';
 import 'package:flutter_app/image_demo.dart';
 import 'package:flutter_app/input_demo.dart';
+import 'package:flutter_app/layout.dart';
+import 'package:flutter_app/text.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.purple,
       ),
-      home: InputDemo(),
+      home: MyHomePage(
+        title: "mmmm",
+      ),
     );
   }
 }
@@ -94,12 +98,19 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            RaisedButton(
+              child: Text("layout"),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Layout()));
+              },
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            RaisedButton(
+              child: Text("text"),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TextView()));
+              },
             ),
           ],
         ),
